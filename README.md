@@ -9,7 +9,7 @@ Fine-tuned EfficientNet-B0 to distinguish AI-generated chameleon images (“fake
 Although Model B achieves higher training accuracy (~97%), Model A generalizes better to arbitrary resolutions, making it the safer choice for real-world deployments.
 
 ## Dataset & Preprocessing
-- Source: Custom `ImageFolder` dataset under `Chameleon/{fake,real}`.
+- Source: https://github.com/shilinyan99/AIDE/issues/7
 - Split: 80/20 stratified random split → 20,826 training images / 5,207 validation images.
 - Transforms: Resize to 224×224, convert to tensor, normalize with ImageNet mean/std.
 - DataLoader: batch size 32, shuffle enabled for training loader.
