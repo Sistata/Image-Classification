@@ -35,18 +35,6 @@ Although Model B achieves higher training accuracy (~97%), Model A generalizes b
 ![Training Accuracy](training_accuracy.png)
 The plot compares the two heads over 10 epochs. Model B converges faster but sacrifices robustness; Model A plateaus around 88% yet remains input-size invariant.
 
-> If `training_accuracy.png` is missing, generate it by running `python generate_training_plot.py` in this directory.
-
-## Reproducing the Experiment
-1. Install dependencies (PyTorch 2.x, torchvision, CUDA-enabled runtime recommended).
-2. Place the dataset under `Image-Classification/Chameleon/fake|real`.
-3. Open `EfficientNet_Chameleon.ipynb` and run all cells.
-4. Optional: tweak `train_transforms` for augmentation or unfreeze later EfficientNet blocks for improved validation accuracy.
-
-## Next Steps
-- Unfreeze stages 5–7 of EfficientNet for fine-tuning.
-- Add on-the-fly augmentations (color jitter, random perspective) to close the gap between robustness and accuracy.
-- Export Model A via TorchScript for lightweight deployment.
 
 This project demonstrates transfer learning, experimentation with classifier heads, and robustness validation for image classification workloads.
 
